@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@400;500;600;700&display=swap');
 
 
-body{
-  font-family:'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #E7F6FF;
 }
 
@@ -16,11 +16,13 @@ body{
 
 header {
   border-bottom: 1px solid #eaeaea;
-  .headerInfo{
-    h3{
+
+  .headerInfo {
+    h3 {
       margin: 0;
     }
-    p{
+
+    p {
       margin: 0;
     }
   }
@@ -32,6 +34,58 @@ header {
   }
 }
 
+.card {
+  position: relative;
+  border: 1px solid #eaeaea;
+  padding: 29px;
+  width: 210px;
+  border-radius: 40px;
+  margin-bottom: 40px;
+
+  span {
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+  b{
+    font-size: 13px;
+  }
+
+  .hard{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    left: 29px;
+    top: 29px;
+
+    background: #FFFFFF;
+    border: 1px solid #F8F8F8;
+    box-sizing: border-box;
+    border-radius: 7px;
+  }
+
+  .description {
+    width: 150px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.button{
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 8px;;
+  width: 32px;
+  height: 32px;
+
+}
 
 
 
