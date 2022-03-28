@@ -2,8 +2,11 @@
 
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #E7F6FF;
+}
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .wrapper {
@@ -40,7 +43,13 @@ header {
   padding: 29px;
   width: 210px;
   border-radius: 40px;
-  margin-bottom: 40px;
+  margin: 20px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
 
   span {
     text-transform: uppercase;
@@ -48,21 +57,17 @@ header {
     opacity: 0.5;
   }
 
-  b{
+  b {
     font-size: 13px;
   }
 
-  .hard{
+  .hard {
     position: absolute;
+    border: 1.5px solid #F8F8F8;
     width: 32px;
     height: 32px;
     padding: 5px;
-    left: 29px;
-    top: 29px;
-
     background: #FFFFFF;
-    border: 1px solid #F8F8F8;
-    box-sizing: border-box;
     border-radius: 7px;
   }
 
@@ -76,7 +81,7 @@ header {
   }
 }
 
-.button{
+.button {
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
   box-sizing: border-box;
@@ -87,5 +92,147 @@ header {
 
 }
 
+.search-block {
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  padding: 0 15px;
+
+  input {
+    width: 250px;
+    border: none;
+    padding: 12.5px;
+    font-size: 16px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  .drawer {
+    position: absolute;
+    width: 420px;
+    height: 100%;
+    right: 0;
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+
+    .items {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin: 0;
+      svg{
+        cursor: pointer;
+      }
+    }
+
+  }
+}
+
+.cartTotalBlock {
+  ul {
+    margin-bottom: 35px;
+
+    li {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    div {
+      flex: 1;
+      border-bottom: 2px dashed #eaeaea;
+      position: relative;
+      top: -2px;
+      margin: 0 5px;
+    }
+  }
+
+  .greenButton {
+    position: relative;
+
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      transition: transform 0.12s ease-in-out;
+    }
+  }
+}
+
+.greenButton {
+  width: 100%;
+  height: 55px;
+  background: #9DD558;
+  border-radius: 18px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+
+  &:hover {
+    background: lighten(#9DD558, 5%);
+  }
+
+  &:active {
+    background: darken(#9DD558, 5%);
+  }
+}
+
+.cartItem {
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+
+  .cartItemImg {
+    height: 70px;
+    width: 70px;
+    background-size: contain;
+    background-position: 0 -3px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  b {
+    font-size: 14px;
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
 
 
