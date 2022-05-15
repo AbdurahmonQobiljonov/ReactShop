@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  border: 1px solid #eaeaea;
+  padding: 29px;
+  width: 210px;
+  border-radius: 40px;
+  margin: 20px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
+
+  span {
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+
+  b {
+    font-size: 13px;
+  }
+
+  .hard {
+    position: absolute;
+    border: 1.5px solid #F8F8F8;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    background: #FFFFFF;
+    border-radius: 7px;
+  }
+
+  .description {
+    width: 150px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
